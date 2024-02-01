@@ -1,0 +1,12 @@
+https://download.pytorch.org/whl/cpu/torch-2.1.1%2Bcpu-cp310-cp310-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torchvision-0.16.1%2Bcpu-cp310-cp310-linux_x86_64.whl
+opencv-python-headless
+scipy
+numpy
+Pillow
+scikit-image
+python-bidi
+PyYAML
+Shapely
+pyclipper
+ninja
