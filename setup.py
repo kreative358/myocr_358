@@ -14,15 +14,15 @@ def readme():
 
 setup(
     # name='myocr_358',
-    name='mymyocr_358_358-0',
+    name='myocr_358',
     # packages=['myocr_358'],
-    packages=['mymyocr_358_358-0'],
+    packages=['myocr_358'],
     include_package_data=True,
     # version='1.7.1',
     version='0.1',
     install_requires=requirements,
     # entry_points={"console_scripts": ["myocr_358= myocr_358.cli:main"]},
-    entry_points={"console_scripts": ["mymyocr_358_358-0= mymyocr_358_358-0.cli:main"]},
+    entry_points={"console_scripts": ["myocr_358= myocr_358.cli:main"]},
     license='Apache License 2.0',
     description='End-to-End Multi-Lingual Optical Character Recognition (OCR) Solution',
     long_description=readme(),
