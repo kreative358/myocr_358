@@ -177,7 +177,7 @@ class Reader(object):
                                    'This may take several minutes depending upon your network connection.')
                     download_and_unzip(model['url'], model['filename'], self.model_storage_directory, verbose)
                     assert calculate_md5(model_path) == model['md5sum'], corrupt_msg
-                    LOGGER.info('Download complete.')
+                    LOGGER.info(f"1. Download complete. {model['filename']} model_path: {model_path}")
                 elif calculate_md5(model_path) != model['md5sum']:
                     if not self.download_enabled:
                         raise FileNotFoundError("MD5 mismatch for %s and downloads disabled" % model_path)
@@ -187,7 +187,7 @@ class Reader(object):
                                    'This may take several minutes depending upon your network connection.')
                     download_and_unzip(model['url'], model['filename'], self.model_storage_directory, verbose)
                     assert calculate_md5(model_path) == model['md5sum'], corrupt_msg
-                    LOGGER.info('Download complete')
+                    LOGGER.info(f"2. Download complete. {model['filename']} model_path: {model_path}")
             self.setLanguageList(lang_list, model)
 
         else: # user-defined model
@@ -252,7 +252,7 @@ class Reader(object):
                                'This may take several minutes depending upon your network connection.')
                 download_and_unzip(self.detection_models[self.detect_network]['url'], self.detection_models[self.detect_network]['filename'], self.model_storage_directory, self.verbose)
                 assert calculate_md5(detector_path) == self.detection_models[self.detect_network]['md5sum'], corrupt_msg
-                LOGGER.info('Download complete')
+                LOGGER.info(f"3. Download complete. {self.detection_models[self.detect_network]['filename']} self.model_storage_directory: {self.model_storage_directory}")
             elif calculate_md5(detector_path) != self.detection_models[self.detect_network]['md5sum']:
                 if not self.download_enabled:
                     raise FileNotFoundError("MD5 mismatch for %s and downloads disabled" % detector_path)
